@@ -4,15 +4,15 @@
 
 template<typename T>
 class TPQueue {
-private:
+ private:
     struct Node {
         T data;
         Node* next;
-        Node(const T& data) : data(data), next(nullptr) {}
+        explicit Node(const T& data) : data(data), next(nullptr) {}
     };
-
     Node* head;
-public:
+
+ public:
     TPQueue() : head(nullptr) {}
     ~TPQueue() {
         while (head) {
